@@ -1,0 +1,751 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MASOTOKZ.apparel | Custom Jersey Berkualitas</title>
+    <!-- Google Fonts -->
+     <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <!-- Font Awesome untuk Ikon -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <style>
+    
+    /* --- Reset & Base Styles --- */
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    body {
+        font-family: 'Poppins', sans-serif;
+        line-height: 1.6;
+        color: #333;
+        scroll-behavior: smooth;
+        background-color: #f9f9f9;
+    }
+
+ /* --- Navbar Fix --- */
+header {
+    background: #1a1a1a;
+    color: #fff;
+    padding: 10px 5%; 
+    position: absolute;
+    width: 100%;
+    top: 0;
+    z-index: 2000; /* Pastikan di paling atas */
+    display: flex;
+    justify-content: space-between; /* Logo di kiri, Menu di kanan */
+    align-items: center;
+    height: 80px; /* Kunci tinggi navbar */
+    box-sizing: border-box;
+}
+
+/* Container Logo Pojok Kiri */
+.logo-container {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    gap: 12px;
+}
+
+/* Kunci Ukuran Logo agar tidak raksasa */
+.logo-img {
+    height: 55px; /* Ini akan memaksa logo jadi kecil pas di pojok */
+    width: auto;
+    object-fit: contain;
+    /* Membuat logo hitam kamu jadi merah menyala */
+    filter: brightness(0) saturate(100%) invert(43%) sepia(83%) saturate(3025%) hue-rotate(334deg) brightness(101%) contrast(101%);
+}
+
+/* Tulisan MASOTOKZ.apparel */
+.brand-name {
+    font-size: 1.4rem;
+    font-weight: 800;
+    color: #ff4757;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Menu Navigasi di Kanan */
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 25px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+nav ul li a:hover {
+    color: #ff4757;
+}
+ 
+/* Pengaturan Gambar Logo */
+.logo-img {
+    width: 45px; /* Ukuran logo */
+    height: 45px;
+    object-fit: contain;
+    /* Trik CSS Filter untuk membuat logo hitam menjadi MERAH (#ff4757) */
+    filter: brightness(0) saturate(100%) invert(43%) sepia(83%) saturate(3025%) hue-rotate(334deg) brightness(101%) contrast(101%);
+}
+    nav ul {
+        display: flex;
+        list-style: none;
+    }
+    nav ul li {
+        margin-left: 20px;
+    }
+    nav ul li a {
+        color: #fff;
+        text-decoration: none;
+        transition: 0.3s;
+        font-size: 0.9rem;
+    }
+    nav ul li a:hover {
+        color: #ff4757;
+    }
+
+    /* --- Hero Section --- */
+/* Update CSS Hero */
+.hero {
+    height: 100vh;
+    background: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)), 
+                url('https://images.unsplash.com/photo-1574629810360-7efbbe195018?auto=format&fit=crop&w=1350&q=80');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #fff;
+    padding: 0 20px;
+    position: relative; /* Penting untuk posisi tulisan background */
+    overflow: hidden; /* Supaya tulisan besar tidak keluar layar */
+}
+
+/* Tulisan Grafiti Background */
+.hero-bg-text {
+    position: absolute;
+    font-family: 'Permanent Marker', cursive; /* Font gaya grafiti */
+    font-size: 18vw; /* Ukuran sangat besar mengikuti lebar layar */
+    color: rgba(255, 71, 87, 0.08); /* Warna merah sangat transparan */
+    white-space: nowrap;
+    z-index: 1;
+    user-select: none;
+    pointer-events: none;
+    text-transform: uppercase;
+    transform: rotate(-10deg); /* Biar agak miring ala grafiti */
+    -webkit-text-stroke: 2px rgba(255, 255, 255, 0.03); /* Garis tepi tipis */
+}
+
+/* Memastikan konten utama di atas grafiti */
+.hero h1, .hero p, .hero .btn {
+    position: relative;
+    z-index: 2;
+}
+
+.hero h1 {
+    font-size: clamp(2.5rem, 8vw, 4.5rem);
+    text-shadow: 2px 4px 10px rgba(0,0,0,0.5); /* Bayangan biar teks utama tajam */
+}
+    .hero p {
+        font-size: 1.1rem;
+        margin-bottom: 2rem;
+        max-width: 700px;
+        opacity: 0.9;
+    }
+    .btn {
+        background: #ff4757;
+        color: white;
+        padding: 12px 35px;
+        text-decoration: none;
+        border-radius: 50px;
+        font-weight: 600;
+        transition: 0.3s;
+        display: inline-block;
+        border: none;
+        cursor: pointer;
+    }
+    .btn:hover {
+        background: #ff6b81;
+        transform: translateY(-3px);
+        box-shadow: 0 10px 20px rgba(255, 71, 87, 0.3);
+    }
+
+    /* --- Features Section (UPDATE CSS DI SINI) --- */
+    .features {
+        padding: 100px 5%;
+        background: #fff;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 30px;
+        text-align: center;
+    }
+    .feature-card {
+        padding: 40px 30px;
+        border-radius: 20px;
+        background: #fff;
+        border: 1px solid #f0f0f0;
+        transition: 0.4s;
+    }
+    .feature-card:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 20px 40px rgba(0,0,0,0.05);
+        border-color: #ff4757;
+    }
+    .feature-card i {
+        background: #fff0f1; /* Warna pink muda */
+        width: 80px;
+        height: 80px;
+        line-height: 80px; /* Agar ikon pas di tengah */
+        border-radius: 50%;
+        font-size: 2rem;
+        color: #ff4757;
+        margin-bottom: 25px;
+        display: inline-block;
+        transition: 0.4s;
+    }
+    .feature-card:hover i {
+        background: #ff4757; /* Berubah jadi merah saat di-hover */
+        color: #fff; /* Ikon jadi putih saat di-hover */
+        transform: rotateY(180deg); /* Animasi putar tipis */
+    }
+    .feature-card h3 {
+        margin-bottom: 15px;
+        font-size: 1.3rem;
+        color: #1a1a1a;
+    }
+    .feature-card p {
+        font-size: 0.95rem;
+        color: #666;
+    }
+
+    /* --- Product Section --- */
+    .products {
+        padding: 100px 5%;
+        text-align: center;
+    }
+    .products h2 {
+        font-size: 2.5rem;
+        margin-bottom: 50px;
+    }
+    .product-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 30px;
+    }
+    .product-item {
+        background: #fff;
+        padding: 20px;
+        border-radius: 15px;
+        box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+        transition: 0.3s;
+        border: 1px solid #eee;
+    }
+    .product-item:hover {
+        transform: scale(1.03);
+    }
+    .product-item img {
+        width: 100%;
+        height: 350px;
+        object-fit: cover;
+        border-radius: 10px;
+    }
+    .product-item h4 {
+        margin: 20px 0 10px;
+        font-size: 1.1rem;
+    }
+    .price {
+        color: #ff4757;
+        font-weight: 700;
+        font-size: 1.3rem;
+        margin-bottom: 20px;
+        display: block;
+    }
+
+    /* --- Footer --- */
+    footer {
+        background: #1a1a1a;
+        color: #fff;
+        padding: 80px 5% 30px;
+        text-align: center;
+    }
+    .socials {
+        margin: 30px 0;
+    }
+    .socials a {
+        color: #fff;
+        font-size: 1.8rem;
+        margin: 0 15px;
+        transition: 0.3s;
+    }
+    .socials a:hover { color: #ff4757; }
+    .copyright {
+        font-size: 0.85rem;
+        opacity: 0.5;
+        border-top: 1px solid #333;
+        padding-top: 30px;
+        margin-top: 30px;
+    }
+
+ /* --- RESPONSIVE MOBILE OPTIMIZATION --- */
+ /* --- RESPONSIVE MOBILE OPTIMIZATION --- */
+@media (max-width: 768px) {
+    /* Judul Section */
+    .features h2, .products h2 {
+        font-size: 1.5rem !important; /* Perkecil judul section */
+        margin-bottom: 20px !important;
+    }
+
+    /* --- Optimasi Keunggulan (Features) --- */
+    .features {
+        padding: 40px 15px; /* Kurangi padding samping */
+        gap: 15px; /* Jarak antar kartu lebih rapat */
+    }
+    .feature-card {
+        padding: 20px 15px; /* Perkecil ruang dalam kartu */
+        border-radius: 15px;
+    }
+    .feature-card i {
+        width: 50px; /* Perkecil ukuran lingkaran ikon */
+        height: 50px;
+        line-height: 50px;
+        font-size: 1.2rem; /* Perkecil ukuran ikon */
+        margin-bottom: 10px;
+    }
+    .feature-card h3 {
+        font-size: 1rem; /* Judul keunggulan lebih kecil */
+        margin-bottom: 5px;
+    }
+    .feature-card p {
+        font-size: 0.8rem; /* Teks penjelasan lebih kecil */
+        line-height: 1.4;
+    }
+
+    /* --- Optimasi Katalog (Produk) --- */
+    .products {
+        padding: 40px 10px;
+    }
+    .product-grid {
+        grid-template-columns: repeat(2, 1fr); /* JADI 2 KOLOM DI HP */
+        gap: 10px; /* Jarak antar produk lebih tipis */
+    }
+    .product-item {
+        padding: 10px; /* Kurangi padding kartu produk */
+        border-radius: 10px;
+    }
+    .product-item img {
+        height: 180px; /* Sesuaikan tinggi gambar agar pas 2 kolom */
+        border-radius: 8px;
+    }
+    .product-item h4 {
+        font-size: 0.85rem; /* Judul produk lebih kecil */
+        margin: 10px 0 5px;
+        height: 40px; /* Kunci tinggi judul agar sejajar */
+        overflow: hidden;
+    }
+    .price {
+        font-size: 0.9rem; /* Ukuran harga lebih kecil */
+        margin-bottom: 10px;
+    }
+    .product-item .btn {
+        padding: 8px 5px; /* Tombol lebih ramping */
+        font-size: 0.7rem;
+        width: 100%; /* Tombol penuh ke samping */
+        border-radius: 5px;
+    }
+
+    /* Navbar Mobile */
+    .logo-container {
+        gap: 8px;
+    }
+    .logo-img {
+        height: 35px; /* Logo lebih kecil di HP */
+    }
+    .brand-name {
+        font-size: 1rem; /* Nama brand lebih kecil agar tidak tabrakan */
+    }
+}
+@media (max-width: 768px) {
+    header {
+        height: 60px;
+        padding: 0 15px;
+        position: relative; /* Agar menu muncul di bawahnya */
+    }
+
+    .logo-img {
+        height: 30px !important; /* Logo dikecilkan */
+    }
+
+    .brand-name {
+        font-size: 0.9rem !important;
+    }
+
+    /* Sembunyikan menu teks di HP */
+    #nav-list {
+        display: none; 
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        background: #1a1a1a;
+        padding: 20px 0;
+        z-index: 9999;
+    }
+
+    /* Class untuk memunculkan menu (dipicu oleh JS) */
+    #nav-list.show {
+        display: flex !important;
+    }
+
+    #nav-list li {
+        margin: 10px 0;
+    }
+
+    /* Munculkan tombol tiga garis di HP saja */
+    .menu-toggle {
+        display: block !important;
+        font-size: 1.5rem;
+        color: white;
+        cursor: pointer;
+    }
+}
+
+/* Sembunyikan tombol tiga garis di Laptop */
+.menu-toggle {
+    display: none;
+}@media (max-width: 768px) {
+    /* Mencegah layar bisa digeser ke kanan (menghilangkan ruang putih) */
+    html, body {
+        overflow-x: hidden;
+        width: 100%;
+    }
+
+    header {
+        height: 60px; /* Navbar lebih tipis di HP */
+        padding: 0 15px;
+        justify-content: space-between;
+    }
+
+    .logo-img {
+        height: 30px !important; /* Logo dikecilkan drastis agar tidak makan tempat */
+    }
+
+    .brand-name {
+        font-size: 0.9rem !important; /* Tulisan MASOTOKZ lebih kecil */
+    }
+
+    /* SEMBUNYIKAN MENU TULISAN DI HP */
+    nav ul {
+        display: none; /* Menu teks hilang */
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        background: rgba(26, 26, 26, 0.95);
+        padding: 20px 0;
+        text-align: center;
+        z-index: 3000;
+    }
+
+    /* Munculkan menu saat tombol diklik (nanti pakai JS) */
+    nav ul.active {
+        display: flex;
+    }
+
+    /* MUNCULKAN TOMBOL TIGA GARIS */
+    .menu-toggle {
+        display: block !important;
+        color: white;
+        font-size: 1.5rem;
+        cursor: pointer;
+    }
+
+}
+</style>
+</head>
+<script>
+    // Ambil elemen
+    const tombolMenu = document.getElementById('mobile-menu');
+    const listMenu = document.getElementById('nav-list');
+
+    // Fungsi saat tombol diklik
+    tombolMenu.onclick = function() {
+        listMenu.classList.toggle('show');
+    };
+
+    // Fungsi agar menu tertutup saat link diklik
+    window.onclick = function(event) {
+        if (!event.target.matches('#mobile-menu') && !event.target.matches('.fa-bars')) {
+            if (listMenu.classList.contains('show')) {
+                listMenu.classList.remove('show');
+            }
+        }
+    }
+</script>
+<body>
+ <header>
+    <a href="#" class="logo-container">
+        <!-- Logo dipastikan kecil -->
+        <img src="https://i.ibb.co.com/xt5HN70f/logo-masotokz.png" alt="Logo" class="logo-img">
+        <span class="brand-name">MASOTOKZ.apparel</span>
+    </a>
+
+    <!-- Tombol Menu HP (Tiga Garis) -->
+    <div class="menu-toggle" id="mobile-menu">
+        <i class="fas fa-bars"></i>
+    </div>
+
+    <nav>
+        <ul id="nav-list">
+            <li><a href="#">Home</a></li>
+            <li><a href="#products">Katalog</a></li>
+            <li><a href="#features">Keunggulan</a></li>
+            <li><a href="#contact">Kontak</a></li>
+        </ul>
+    </nav>
+</header>
+
+    <section class="hero">
+        <h1>Tampil Beda di Lapangan</h1>
+        <p>Custom jersey premium untuk tim futsal, sepak bola, dan e-sport dengan kualitas bahan terbaik dan desain tanpa batas.</p>
+        <a href="https://wa.me/6282223525106?text=Halo%20Masotokz,%20saya%20mau%20tanya%20order%20jersey" class="btn">
+            <i class="fab fa-whatsapp"></i> Pesan Sekarang
+        </a>
+    </section>
+
+ <!-- Keunggulan Section (10 Poin) -->
+    <section class="features" id="features">
+        <div style="grid-column: 1 / -1; margin-bottom: 50px;">
+            <h2 style="font-size: 2.5rem; margin-bottom: 10px;">10 Keunggulan MASOTOKZ.apparel</h2>
+            <p>Alasan mengapa ribuan pelanggan mempercayakan jersey mereka kepada kami.</p>
+        </div>
+
+        <!-- 1. Warna -->
+        <div class="feature-card">
+            <i class="fas fa-palette"></i>
+            <h3>Warna Pekat & Tajam</h3>
+            <p>Menggunakan tinta Epson original, memastikan warna jersey sangat keluar, detail, dan 100% anti luntur.</p>
+        </div>
+
+        <!-- 2. Bahan -->
+        <div class="feature-card">
+            <i class="fas fa-wind"></i>
+            <h3>Bahan Premium Dry-Fit</h3>
+            <p>Kain khusus olahraga yang dingin, ringan, dan memiliki pori-pori udara untuk sirkulasi keringat maksimal.</p>
+        </div>
+
+        <!-- 3. Jahitan -->
+        <div class="feature-card">
+            <i class="fas fa-cut"></i>
+            <h3>Jahitan Spesialis Sport</h3>
+            <p>Menggunakan teknik jahitan mesin overdeck dan rantai yang sangat kuat, tidak mudah lepas meski dipakai bergerak aktif.</p>
+        </div>
+
+        <!-- 4. Desain -->
+        <div class="feature-card">
+            <i class="fas fa-pencil-ruler"></i>
+            <h3>Gratis Konsultasi Desain</h3>
+            <p>Belum punya desain? Tim desainer profesional kami siap mewujudkan ide kamu menjadi jersey nyata tanpa biaya tambahan.</p>
+        </div>
+
+        <!-- 5. Minimum Order -->
+        <div class="feature-card">
+            <i class="fas fa-user-check"></i>
+            <h3>Bisa Order Satuan</h3>
+            <p>Tidak harus pesanan tim besar! Kami melayani pembuatan jersey satuan dengan kualitas yang tetap sama premiumnya.</p>
+        </div>
+
+        <!-- 6. Pengerjaan -->
+        <div class="feature-card">
+            <i class="fas fa-stopwatch"></i>
+            <h3>Pengerjaan Tepat Waktu</h3>
+            <p>Kami memiliki manajemen produksi yang disiplin untuk memastikan jersey kamu selesai sesuai deadline yang disepakati.</p>
+        </div>
+
+        <!-- 7. Pilihan Kain -->
+        <div class="feature-card">
+            <i class="fas fa-layer-group"></i>
+            <h3>Pilihan Kain Lengkap</h3>
+            <p>Tersedia berbagai pilihan kain populer seperti Milano, Pique, Benzema, hingga Brazil sesuai kebutuhan tim kamu.</p>
+        </div>
+
+        <!-- 8. Mesin Cetak -->
+        <div class="feature-card">
+            <i class="fas fa-print"></i>
+            <h3>Mesin Cetak Modern</h3>
+            <p>Didukung mesin teknologi Jepang terbaru untuk hasil cetakan sublimasi yang meresap sempurna ke serat kain.</p>
+        </div>
+
+        <!-- 9. Pengiriman -->
+        <div class="feature-card">
+            <i class="fas fa-truck-moving"></i>
+            <h3>Kirim Seluruh Indonesia</h3>
+            <p>Bekerjasama dengan ekspedisi terpercaya untuk mengirim pesanan kamu dengan aman dari Sabang sampai Merauke.</p>
+        </div>
+
+        <!-- 10. Garansi -->
+        <div class="feature-card">
+            <i class="fas fa-shield-alt"></i>
+            <h3>Garansi Kualitas</h3>
+            <p>Jika ada kesalahan produksi atau cacat dari kami, kami siap memberikan garansi perbaikan atau retur demi kepuasanmu.</p>
+        </div>
+
+    </section>
+    </section>
+<!-- Produk Section -->
+    <section class="products" id="products">
+        <h2>Koleksi Katalog</h2>
+        <div class="product-grid">
+            
+            <!-- Produk 1 -->
+            <div class="product-item">
+                <img src="https://i.ibb.co.com/6JN3nXqF/BALASTAWA-FIX.jpg" alt="Jersey DTF">
+                <h4>Jersey Stelan DTF</h4>
+                <span class="price">Rp 120.000</span>
+                <a href="https://wa.me/6282223525106?text=Halo,%20saya%20ingin%20order%20Jersey%20Stelan%20DTF" class="btn">Order Via WA</a>
+            </div>
+
+            <!-- Produk 2 -->
+            <div class="product-item">
+                <img src="https://i.ibb.co.com/gbSsyzqJ/TRX20251022-REV-ASTRA.jpg" alt="Jersey Fullprint">
+                <h4>Jersey Stelan Fullprint</h4>
+                <span class="price">Rp 135.000</span>
+                <a href="https://wa.me/6282223525106?text=Halo,%20saya%20ingin%20order%20Jersey%20Fullprint" class="btn">Order Via WA</a>
+            </div>
+
+            <!-- Produk 3 -->
+            <div class="product-item">
+                <img src="https://i.ibb.co.com/QF6pQfGy/JAKARTANS-JPG.jpg" alt="Jersey Atasan">
+                <h4>Jersey Atasan Fullprint</h4>
+                <span class="price">Rp 100.000</span>
+                <a href="https://wa.me/6282223525106?text=Halo,%20saya%20ingin%20order%20Jersey%20Atasan" class="btn">Order Via WA</a>
+            </div>
+
+            <!-- Produk 4 -->
+            <div class="product-item">
+                <img src="https://i.ibb.co.com/FkwCNs5z/HF-celana-specs-ok.jpg" alt="Trackpants">
+                <h4>TrackPants Premium</h4>
+                <span class="price">Rp 80.000</span>
+                <a href="https://wa.me/6282223525106?text=Halo,%20saya%20ingin%20order%20Trackpants" class="btn">Order Via WA</a>
+            </div>
+
+            <!-- Produk 5 (TAMBAHAN BARU) -->
+            <div class="product-item">
+                <img src="https://images.unsplash.com/photo-1517466787929-bc90951d0974?auto=format&fit=crop&w=500&q=80" alt="Jersey Kiper">
+                <h4>Jersey Goalkeeper Set</h4>
+                <span class="price">Rp 150.000</span>
+                <a href="https://wa.me/6282223525106?text=Halo,%20saya%20ingin%20order%20Jersey%20Kiper" class="btn">Order Via WA</a>
+            </div>
+
+            <!-- Produk 6 (TAMBAHAN BARU) -->
+            <div class="product-item">
+                <img src="https://images.unsplash.com/photo-1551952237-954a0e68786c?auto=format&fit=crop&w=500&q=80" alt="Rompi Latihan">
+                <h4>Rompi Latihan Tim</h4>
+                <span class="price">Rp 45.000</span>
+                <a href="https://wa.me/6282223525106?text=Halo,%20saya%20ingin%20order%20Rompi%20Latihan" class="btn">Order Via WA</a>
+            </div>
+
+            <!-- Produk 7 (TAMBAHAN BARU) -->
+            <div class="product-item">
+                <img src="https://images.unsplash.com/photo-1574629810360-7efbbe195018?auto=format&fit=crop&w=500&q=80" alt="Jersey Esport">
+                <h4>Jersey E-Sport Pro</h4>
+                <span class="price">Rp 110.000</span>
+                <a href="https://wa.me/6282223525106?text=Halo,%20saya%20ingin%20order%20Jersey%20Esport" class="btn">Order Via WA</a>
+            </div>
+
+            <!-- Produk 8 (TAMBAHAN BARU) -->
+            <div class="product-item">
+                <img src="https://images.unsplash.com/photo-1515523110800-9415d13b84a8?auto=format&fit=crop&w=500&q=80" alt="Hoodie Sport">
+                <h4>Hoodie Team Custom</h4>
+                <span class="price">Rp 185.000</span>
+                <a href="https://wa.me/6282223525106?text=Halo,%20saya%20ingin%20order%20Hoodie%20Custom" class="btn">Order Via WA</a>
+            </div>
+                 <!-- Produk 8 (TAMBAHAN BARU) -->
+            <div class="product-item">
+                <img src="https://images.unsplash.com/photo-1515523110800-9415d13b84a8?auto=format&fit=crop&w=500&q=80" alt="Hoodie Sport">
+                <h4>Hoodie Team Custom</h4>
+                <span class="price">Rp 185.000</span>
+                <a href="https://wa.me/6282223525106?text=Halo,%20saya%20ingin%20order%20Hoodie%20Custom" class="btn">Order Via WA</a>
+            </div>
+     <!-- Produk 8 (TAMBAHAN BARU) -->
+            <div class="product-item">
+                <img src="https://images.unsplash.com/photo-1515523110800-9415d13b84a8?auto=format&fit=crop&w=500&q=80" alt="Hoodie Sport">
+                <h4>Hoodie Team Custom</h4>
+                <span class="price">Rp 185.000</span>
+                <a href="https://wa.me/6282223525106?text=Halo,%20saya%20ingin%20order%20Hoodie%20Custom" class="btn">Order Via WA</a>
+            </div>
+     <!-- Produk 8 (TAMBAHAN BARU) -->
+            <div class="product-item">
+                <img src="https://images.unsplash.com/photo-1515523110800-9415d13b84a8?auto=format&fit=crop&w=500&q=80" alt="Hoodie Sport">
+                <h4>Hoodie Team Custom</h4>
+                <span class="price">Rp 185.000</span>
+                <a href="https://wa.me/6282223525106?text=Halo,%20saya%20ingin%20order%20Hoodie%20Custom" class="btn">Order Via WA</a>
+            </div>
+     <!-- Produk 8 (TAMBAHAN BARU) -->
+            <div class="product-item">
+                <img src="https://images.unsplash.com/photo-1515523110800-9415d13b84a8?auto=format&fit=crop&w=500&q=80" alt="Hoodie Sport">
+                <h4>Hoodie Team Custom</h4>
+                <span class="price">Rp 185.000</span>
+                <a href="https://wa.me/6282223525106?text=Halo,%20saya%20ingin%20order%20Hoodie%20Custom" class="btn">Order Via WA</a>
+            </div>
+     <!-- Produk 8 (TAMBAHAN BARU) -->
+            <div class="product-item">
+                <img src="https://images.unsplash.com/photo-1515523110800-9415d13b84a8?auto=format&fit=crop&w=500&q=80" alt="Hoodie Sport">
+                <h4>Hoodie Team Custom</h4>
+                <span class="price">Rp 185.000</span>
+                <a href="https://wa.me/6282223525106?text=Halo,%20saya%20ingin%20order%20Hoodie%20Custom" class="btn">Order Via WA</a>
+            </div>
+     <!-- Produk 8 (TAMBAHAN BARU) -->
+            <div class="product-item">
+                <img src="https://images.unsplash.com/photo-1515523110800-9415d13b84a8?auto=format&fit=crop&w=500&q=80" alt="Hoodie Sport">
+                <h4>Hoodie Team Custom</h4>
+                <span class="price">Rp 185.000</span>
+                <a href="https://wa.me/6282223525106?text=Halo,%20saya%20ingin%20order%20Hoodie%20Custom" class="btn">Order Via WA</a>
+            </div>
+     <!-- Produk 8 (TAMBAHAN BARU) -->
+            <div class="product-item">
+                <img src="https://images.unsplash.com/photo-1515523110800-9415d13b84a8?auto=format&fit=crop&w=500&q=80" alt="Hoodie Sport">
+                <h4>Hoodie Team Custom</h4>
+                <span class="price">Rp 185.000</span>
+                <a href="https://wa.me/6282223525106?text=Halo,%20saya%20ingin%20order%20Hoodie%20Custom" class="btn">Order Via WA</a>
+            </div>
+
+
+        </div>
+    </section>
+
+    <footer id="contact">
+        <h3>MASOTOKZ.apparel Indonesia</h3>
+        <p>High Quality Custom Sportswear</p>
+        <div class="socials">
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.tiktok.com/@masotokz.apparel" target="_blank"><i class="fab fa-tiktok"></i></a>
+            <a href="https://wa.me/6282223525106"><i class="fab fa-whatsapp"></i></a>
+        </div>
+        <div class="copyright">
+            &copy; 2024 MASOTOKZ.apparel. All Rights Reserved.
+        </div>
+    </footer>
+
+    <script>
+        // Toggle menu mobile
+        const mobileMenu = document.getElementById('mobile-menu');
+        const navMenu = document.getElementById('nav-menu');
+
+        mobileMenu.addEventListener('click', () => {
+            navMenu.classList.toggle('active');
+        });
+    </script>
+</body>
+</html>
